@@ -1,0 +1,120 @@
+.section-effect {
+  background-image: linear-gradient(180deg, #FCF7E6 0%, rgba(252, 247, 230, 0) 100%);
+  padding: 104px 0;
+
+  .section__title {
+    max-width: 666px;
+    width: 100%;
+    margin: 0 auto 52px;
+  }
+}
+
+.action-list {
+  position: relative;
+  max-width: 933px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: -15px;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 247px;
+    background-image: url(../assets/img/wawes.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 96% 102%;
+  }
+
+  &__item {
+    width: 25%;
+    max-width: 223px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+
+    &:nth-child(odd) {
+      .action-list__wrap-img {
+        margin-top: 40px;
+      }
+
+      .count-item {
+        top: -18px;
+        background-image: linear-gradient(61.34deg, #318F28 -1.53%, #55C64A 93.49%);
+      }
+    }
+
+    &:nth-child(even) {
+      .action-list__wrap-img {
+        margin-bottom: 40px;
+      }
+
+      .count-item {
+        bottom: -20px;
+        background-image: linear-gradient(90deg, #FFBD33 0%, #FF8000 100%);
+      }
+
+      .action-list__text {
+        order: 1;
+        padding-bottom: 0;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__text {
+    padding-bottom: 12px;
+  }
+
+  &__wrap-img {
+    position: relative;
+    max-width: 164px;
+    height: 264px;
+    margin: 0 auto;
+    border: 6px solid #FFFFFF;
+    border-radius: 82px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .count-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

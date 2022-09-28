@@ -1,0 +1,152 @@
+.btn_burger,
+.btn_close {
+  display: none;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+}
+
+.btn_burger {
+  background-image: url(../assets/img/burger.svg);
+  margin-right: 54px;
+
+}
+
+.btn_close {
+  display: none;
+  position: absolute;
+  background-image: url(../assets/img/close.svg);
+  left: 15px;
+  top: 15px;
+}
+
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: #334040;
+  background-color: transparent;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: .35s;
+
+  &.active {
+    &:before {
+      background-color: rgba(43, 62, 68, .2);
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12.5px);
+    border-radius: 6px;
+    transition: .35s;
+  }
+
+  &__logo-site {
+    display: block;
+    width: 160px;
+
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav {
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__footer {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+      margin-top: auto;
+
+    }
+  }
+
+  .footer__logo {
+    max-width: 183px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+}
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+  .header {
+    padding: 20px 0;
+
+    .nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: #ffffff;
+      padding: 80px 15px 20px;
+      transition: transform .5s;
+      transform: translateX(-100%);
+      z-index: 900;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      &__inner {
+        justify-content: flex-start;
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+        flex-direction: column;
+      }
+
+      &__footer {
+        display: flex;
+
+      }
+    }
+
+    .menu {
+      margin-bottom: 50px;
+    }
+
+    .social-bar__item {
+      margin: 0 10px;
+      padding: 7px;
+    }
+  }
+  .btn_close,
+  .btn_burger {
+    display: block !important;
+  }
+
+}

@@ -1,0 +1,263 @@
+:root {
+  font-size: 16px;
+}
+
+body {
+  font: 400 16px/1.38 $main-font;
+  height: 100%;
+  color: #394238;
+  background-color: #ffffff;
+
+  &.modal_open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+.bottom-sheet__content[data-v-83710a2e] {
+  overflow-y: scroll;
+  display: none;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_warm{
+  color: #FF920F;
+}
+.text_success{
+  color: #318F28;
+}
+
+.d-flex {
+  display: flex;
+}
+
+sup {
+  font-size: .7em;
+}
+
+.trademark {
+  vertical-align: text-top;
+}
+
+.section__title{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+  color: #1F1F1F;
+  .text_big{
+    padding-right: 27px;
+    font-weight: 700;
+    font-size: 52px;
+    color: #318F28;
+  }
+}
+
+.social-bar {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(57, 66, 56, 0.1);
+    padding: 5px;
+    margin-left: 56px;
+    transition: .35s;
+    border: 1px solid #394238;
+    border-radius: 50%;
+    box-sizing: initial;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+  }
+}
+
+.phone {
+  background: linear-gradient(90deg, #FFBD33 0%, #FF8000 100%);
+  border-color: transparent;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .5;
+  background-color: #000;
+  z-index: 910;
+}
+
+.literature-sources {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 20px;
+
+  p {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dynamic-content {
+  p {
+    font-size: 24px;
+    margin-bottom: .65em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5em;
+  }
+
+  h1, h2 {
+    font-size: 28px;
+  }
+
+  h3, h4 {
+    font-size: 26px;
+  }
+
+  a {
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 15px;
+    margin-bottom: 20px;
+
+    > li {
+      position: relative;
+      padding-left: 25px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #3B4040;
+        left: 2px;
+        top: 17px;
+      }
+    }
+  }
+
+  ol {
+    position: relative;
+    padding-left: 32px;
+    line-height: 1.5;
+    color: #3B4040;
+    counter-reset: list;
+
+    li:before {
+      position: absolute;
+      left: 8px;
+      counter-increment: list;
+      content: counters(list, '. ') '.';
+    }
+  }
+}
+
+@include respond-to($lg) {
+  body {
+    font-size: 18px;
+  }
+  .dynamic-content {
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($xs) {
+  .dynamic-content {
+    p {
+      font-size: 18px;
+    }
+  }
+  .literature-sources {
+    font-size: 14px;
+  }
+}
+
+@include respond-to($xxs) {
+  body {
+    font-size: 16px;
+  }
+
+  .literature-sources {
+    font-size: 12px;
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+  .dynamic-content {
+    p {
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 11px;
+
+      li {
+        padding-left: 16px;
+
+        &:before {
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+

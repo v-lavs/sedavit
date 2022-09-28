@@ -1,0 +1,138 @@
+.section-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: left 100px top 0 ;
+  background-size: cover;
+  min-height: 800px;
+  padding-top: 115px;
+  padding-bottom: 64px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 60%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #2B3E44 41.92%, rgba(43, 62, 68, 0) 100%);
+  }
+
+  &__slogan {
+    position: relative;
+    width: 100%;
+    font-size: 52px;
+    line-height: 1;
+    color: #FFB42C;
+    font-weight: 700;
+    margin-bottom: 38px;
+
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 538px;
+  }
+
+  &__text {
+    width: 100%;
+    padding-bottom: 78px;
+  }
+
+  &__wrap-img {
+    width: 50%;
+    padding-right: 60px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    padding-left: 30px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 16px;
+      background-image: url(../assets/img/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 0;
+      top: 7px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .block-btns {
+    width: 50%;
+    padding-top: 18px;
+
+    .btn {
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1660px) {
+
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .section-banner {
+    min-height: 625px;
+    padding-top: 115px;
+
+    &__slogan {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($sm) {
+
+}
+
+@include respond-to($xs) {
+
+}
+
+@include respond-to($xxs) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}

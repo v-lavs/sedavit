@@ -1,0 +1,108 @@
+.section-application {
+  position: relative;
+  z-index: 0;
+
+  &__thumb-sm {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    padding-left: 10px;
+  }
+
+  &__item {
+    max-width: 474px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 75px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .text_warm {
+    font-size: 24px;
+    line-height: 1.167;
+    margin-bottom: 10px;
+  }
+
+  .section__title {
+    color: #ffffff;
+    margin-bottom: 60px;
+
+    .text_big {
+      color: #ffffff;
+    }
+  }
+
+  .part {
+    position: relative;
+    width: 50%;
+    min-height: 660px;
+    z-index: 1;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 50vw;
+    }
+
+    &_left {
+      padding-top: 78px;
+      padding-bottom: 87px;
+      padding-right: 50px;
+
+      &:before {
+        background-image: url(../assets/img/bg--appl1.jpg);
+        right: 0;
+      }
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 96px;
+      padding-top: 114px;
+      padding-bottom: 40px;
+
+      &:before {
+        background-image: url(../assets/img/bg--appl2.jpg);
+        left: 0;
+      }
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 18px;
+      line-height: 1.39;
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 10px;
+        height: 16px;
+        background-image: url(../assets/img/arrow-right.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: 0;
+        top: 4px;
+        z-index: 1;
+      }
+    }
+  }
+}
