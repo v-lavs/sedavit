@@ -77,18 +77,5 @@
       }
     }
   }
-
-  @include respond-to($md) {
-
-  }
-  @include respond-to($xs) {
-
-  }
 }
-
-
-button[disabled] {
-  cursor: none;
-}
-
 

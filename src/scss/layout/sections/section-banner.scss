@@ -2,12 +2,22 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  background-repeat: no-repeat;
-  background-position: left 100px top 0 ;
-  background-size: cover;
+
   min-height: 800px;
   padding-top: 115px;
   padding-bottom: 64px;
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: left 100px top 0;
+    background-size: cover;
+    height: 100%;
+  }
 
   &:before {
     position: absolute;
@@ -41,6 +51,7 @@
   &__text {
     width: 100%;
     padding-bottom: 78px;
+    padding-right: 20px;
   }
 
   &__wrap-img {
@@ -79,23 +90,18 @@
     z-index: 1;
   }
 
+  .btn {
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .block-btns {
     width: 50%;
     padding-top: 18px;
-
-    .btn {
-      margin-bottom: 26px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
   }
-}
-
-
-@media screen and (max-width: 1660px) {
-
 }
 
 @media screen and (max-height: 768px) and (orientation: landscape) {
@@ -113,25 +119,116 @@
   }
 }
 
-@include respond-to($lg) {
+@include respond-to($xl) {
+  .section-banner__bg {
+    background-position: left 25% top 0;
+  }
+}
 
+@include respond-to($lg) {
+  .section-banner__bg {
+    background-position: right 60% top 0;
+  }
 }
 
 @include respond-to($md) {
-
+  .section-banner__bg {
+    background-position: left 32% top 0;
+  }
 }
 
 @include respond-to($sm) {
+  .section-banner {
+    padding-bottom: 0;
+    flex-direction: column;
 
+    &:before {
+      width: 100%;
+      background: #2B3E44;
+    }
+
+    &__bg {
+      width: 100%;
+      position: relative;
+      background-position: center;
+      padding-top: 60%;
+      min-height: 285px;
+      z-index: 1;
+      margin-top: 43px;
+    }
+  }
 }
 
 @include respond-to($xs) {
+  .section-banner {
+    &__slogan {
+      font-size: 32px;
+    }
 
+    &__wrap-img {
+      padding-right: 24px;
+    }
+
+    &__text {
+      padding-bottom: 40px;
+    }
+
+    &__item {
+      font-size: 20px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+
+      &:before {
+        top: 3px;
+      }
+    }
+
+    .btn {
+      min-width: 172px;
+      font-size: 14px;
+      padding-left: 50px;
+      padding-top: 8px;
+      padding-bottom: 9px;
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        width: 45px;
+        height: 45px;
+      }
+
+      &:after {
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        right: 2px;
+      }
+    }
+  }
 }
 
-//@include respond-to($xxs) {
-//
-//}
+@include respond-to($xxs) {
+  .section-banner {
+    &__text {
+      padding-right: 0;
+    }
+
+    &__wrap-img {
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+
+    .block-btns,
+    &__wrap-img {
+      width: 100%;
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+}
 
 @media screen and (max-width: 480px) {
 

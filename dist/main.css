@@ -404,10 +404,6 @@ sup {
   box-shadow: 0 4px 20px rgba(255, 170, 35, 0.5);
 }
 
-button[disabled] {
-  cursor: none;
-}
-
 .menu {
   display: flex;
   align-items: center;
@@ -837,12 +833,21 @@ button[disabled] {
   position: relative;
   display: flex;
   align-items: flex-end;
-  background-repeat: no-repeat;
-  background-position: left 100px top 0;
-  background-size: cover;
   min-height: 800px;
   padding-top: 115px;
   padding-bottom: 64px;
+}
+
+.section-banner__bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: left 100px top 0;
+  background-size: cover;
+  height: 100%;
 }
 
 .section-banner:before {
@@ -876,6 +881,7 @@ button[disabled] {
 .section-banner__text {
   width: 100%;
   padding-bottom: 78px;
+  padding-right: 20px;
 }
 
 .section-banner__wrap-img {
@@ -914,17 +920,17 @@ button[disabled] {
   z-index: 1;
 }
 
-.section-banner .block-btns {
-  width: 50%;
-  padding-top: 18px;
-}
-
-.section-banner .block-btns .btn {
+.section-banner .btn {
   margin-bottom: 26px;
 }
 
-.section-banner .block-btns .btn:last-child {
+.section-banner .btn:last-child {
   margin-bottom: 0;
+}
+
+.section-banner .block-btns {
+  width: 50%;
+  padding-top: 18px;
 }
 
 .section-buy {
@@ -1305,6 +1311,12 @@ button[disabled] {
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .section-banner__bg {
+    background-position: left 25% top 0;
+  }
+}
+
 @media only screen and (max-width: 1160px) {
   body {
     font-size: 18px;
@@ -1316,6 +1328,10 @@ button[disabled] {
 
   .container {
     max-width: 960px;
+  }
+
+  .section-banner__bg {
+    background-position: right 60% top 0;
   }
 }
 
@@ -1381,9 +1397,13 @@ button[disabled] {
   .btn_burger {
     display: block !important;
   }
+
+  .section-banner__bg {
+    background-position: left 32% top 0;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: 580px;
   }
@@ -1391,6 +1411,26 @@ button[disabled] {
   .footer .social-bar__item {
     margin: 0 40px 0 0;
     padding: 14px;
+  }
+
+  .section-banner {
+    padding-bottom: 0;
+    flex-direction: column;
+  }
+
+  .section-banner:before {
+    width: 100%;
+    background: #2B3E44;
+  }
+
+  .section-banner__bg {
+    width: 100%;
+    position: relative;
+    background-position: center;
+    padding-top: 60%;
+    min-height: 285px;
+    z-index: 1;
+    margin-top: 43px;
   }
 }
 
@@ -1530,6 +1570,53 @@ button[disabled] {
     padding: 7px;
   }
 
+  .section-banner__slogan {
+    font-size: 32px;
+  }
+
+  .section-banner__wrap-img {
+    padding-right: 24px;
+  }
+
+  .section-banner__text {
+    padding-bottom: 40px;
+  }
+
+  .section-banner__item {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .section-banner__item:before {
+    top: 3px;
+  }
+
+  .section-banner .btn {
+    min-width: 172px;
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin-bottom: 18px;
+  }
+
+  .section-banner .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-banner .btn:before {
+    width: 45px;
+    height: 45px;
+  }
+
+  .section-banner .btn:after {
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+  }
+
   .section-buy {
     padding-top: 20px;
     padding-bottom: 40px;
@@ -1569,6 +1656,24 @@ button[disabled] {
   .section-buy .section__block-btns .btn_dark {
     padding-left: 17px;
     padding-right: 17px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .section-banner__text {
+    padding-right: 0;
+  }
+
+  .section-banner__wrap-img {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .section-banner .block-btns,
+  .section-banner__wrap-img {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
   }
 }
 
