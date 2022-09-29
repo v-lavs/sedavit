@@ -1299,7 +1299,13 @@ button[disabled] {
   z-index: 1;
 }
 
-@media only screen and (max-width: 1280px) {
+@media (min-width: 769px) {
+  #geo_wgt .c-w-main-wrapper {
+    height: 100vh !important;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
   body {
     font-size: 18px;
   }
@@ -1309,11 +1315,11 @@ button[disabled] {
   }
 
   .container {
-    max-width: 1080px;
+    max-width: 960px;
   }
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 991px) {
   .menu {
     flex-direction: column;
   }
@@ -1324,7 +1330,7 @@ button[disabled] {
   }
 
   .container {
-    max-width: 980px;
+    max-width: 710px;
   }
 
   .header {
@@ -1377,9 +1383,9 @@ button[disabled] {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .container {
-    max-width: 760px;
+    max-width: 580px;
   }
 
   .footer .social-bar__item {
@@ -1388,13 +1394,42 @@ button[disabled] {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 580px) {
   .dynamic-content p {
     font-size: 18px;
   }
 
   .literature-sources {
     font-size: 14px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .literature-sources {
+    font-size: 12px;
+  }
+
+  .literature-sources p {
+    margin-bottom: 12px;
+  }
+
+  .dynamic-content p {
+    font-size: 16px;
+  }
+
+  .dynamic-content ul {
+    padding-left: 11px;
+  }
+
+  .dynamic-content ul li {
+    padding-left: 16px;
+  }
+
+  .dynamic-content ul li:before {
+    left: 0;
+    top: 10px;
   }
 
   .popup {
@@ -1426,8 +1461,25 @@ button[disabled] {
     flex: 0 0 100%;
   }
 
+  .popup {
+    padding: 0 0 15px;
+    height: 717px;
+  }
+
+  .popup .section__title {
+    font-size: 22px;
+  }
+
+  .popup .popup__header h2 {
+    font-size: 23px;
+  }
+
+  .popup .popup__contact-item {
+    max-width: 100%;
+  }
+
   .container {
-    max-width: 580px;
+    max-width: 420px;
   }
 
   .footer {
@@ -1500,58 +1552,6 @@ button[disabled] {
 
   .section-buy .section__block-btns .btn_light .btn__icon {
     margin: 0;
-  }
-}
-
-@media only screen and (max-width: 580px) {
-  body {
-    font-size: 16px;
-  }
-
-  .literature-sources {
-    font-size: 12px;
-  }
-
-  .literature-sources p {
-    margin-bottom: 12px;
-  }
-
-  .dynamic-content p {
-    font-size: 16px;
-  }
-
-  .dynamic-content ul {
-    padding-left: 11px;
-  }
-
-  .dynamic-content ul li {
-    padding-left: 16px;
-  }
-
-  .dynamic-content ul li:before {
-    left: 0;
-    top: 10px;
-  }
-
-  .popup {
-    padding: 0 0 15px;
-    height: 717px;
-  }
-
-  .popup .section__title {
-    font-size: 22px;
-  }
-
-  .popup .popup__header h2 {
-    font-size: 23px;
-  }
-
-  .popup .popup__contact-item {
-    max-width: 100%;
-  }
-
-  .container {
-    max-width: 420px;
   }
 
   .section-buy {

@@ -176,7 +176,7 @@
   }
 }
 
-@include respond-to($xxs) {
+@include respond-to($xs) {
   .popup {
     padding: 0 0 15px;
     height: 717px;

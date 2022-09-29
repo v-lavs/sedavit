@@ -1,7 +1,7 @@
 'use strict';
 
 console.clear();
-var maxBubbles = 25; //25
+var maxBubbles = 10; //25
 var container = document.querySelector('.demo');
 var containerWidth = container.clientWidth;
 var containerHeight = container.clientHeight;

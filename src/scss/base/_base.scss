@@ -228,7 +228,7 @@ sup {
   }
 }
 
-@include respond-to($xxs) {
+@include respond-to($xs) {
   body {
     font-size: 16px;
   }

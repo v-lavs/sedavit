@@ -5,19 +5,15 @@
   padding: 0 15px;
   margin: 0 auto;
   @include respond-to($lg) {
-    max-width: 1080px;
+    max-width: 960px;
   }
   @include respond-to($md) {
-    max-width: 980px;
+    max-width: 710px;
   }
   @include respond-to($sm) {
-    max-width: 760px;
+    max-width: 580px;
   }
   @include respond-to($xs) {
-    max-width: 580px;
-
-  }
-  @include respond-to($xxs) {
     max-width: 420px;
   }
 }
