@@ -19,8 +19,8 @@ var bubbles = [];
 var minX = 0;
 var minY = 0;
 
-var baseShapeSize = 200;
-var minShapeSize = 50;
+var baseShapeSize = 130;
+var minShapeSize = 24;
 
 var time = 7;
 var minTime = 4;
