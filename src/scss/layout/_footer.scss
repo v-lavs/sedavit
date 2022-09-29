@@ -26,14 +26,15 @@
   &_bottom {
     display: flex;
     justify-content: center;
-    padding:20px 0 0;
+    padding: 20px 0 0;
     border-top: 1px solid rgba(51, 64, 64, .1);
   }
 
   &__item {
     position: relative;
     padding: 0 20px;
-    .text_warm{
+
+    .text_warm {
       margin-left: 10px;
     }
 
@@ -73,6 +74,7 @@
   width: 100%;
   height: 15vh;
   z-index: 500;
+
   &:before {
     position: absolute;
     content: '';
@@ -86,6 +88,7 @@
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
   }
+
   img {
     display: block;
     width: 100%;
@@ -95,33 +98,16 @@
 
 @include respond-to($sm) {
   .footer {
-    .social-bar__item {
-      margin: 0 40px 0 0;
-      padding: 14px;
-
-    }
-  }
-}
-
-@include respond-to($xs) {
-  .footer {
-    padding-bottom: 20px;
-
-    &.height {
-      padding-bottom: calc(15vh + 20px);
-    }
+    padding-bottom: calc(15vh + 20px);
 
     &__logo {
-      margin-bottom: 20px;
       width: 100%;
-
+      margin-bottom: 40px;
     }
 
     &_top {
       flex-wrap: wrap;
       justify-content: center;
-      padding-top: 20px;
-      padding-bottom: 40px;
     }
 
     &_bottom {
@@ -142,18 +128,19 @@
         display: none;
       }
     }
-
     .social-bar {
       width: 100%;
-
-      &__item {
-        margin: 0 10px;
-        padding: 7px;
-      }
     }
   }
 }
 
-//@include respond-to($xxs) {
-//
-//}
+@include respond-to($xxs) {
+  .footer {
+    .social-bar {
+      &__item {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
