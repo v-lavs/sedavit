@@ -214,13 +214,20 @@ sup {
 
 .social-bar__item:hover,
 .social-bar__item:focus {
-  transform: scale(1.1);
+  background-color: #FF8000;
+  border-color: #FF8000;
+}
+
+.social-bar__item:hover svg path,
+.social-bar__item:focus svg path {
+  fill: #ffffff;
 }
 
 .social-bar__item svg {
   width: 32px;
   height: 32px;
   display: block;
+  transition: .35s;
 }
 
 .phone {
@@ -278,13 +285,13 @@ sup {
 }
 
 .dynamic-content ul {
-  padding-left: 15px;
+  padding-left: 11px;
   margin-bottom: 20px;
 }
 
 .dynamic-content ul > li {
   position: relative;
-  padding-left: 25px;
+  padding-left: 16px;
 }
 
 .dynamic-content ul > li:before {
@@ -295,8 +302,8 @@ sup {
   height: 6px;
   border-radius: 50%;
   background-color: #3B4040;
-  left: 2px;
-  top: 17px;
+  left: 0;
+  top: 10px;
 }
 
 .dynamic-content ol {
@@ -1863,35 +1870,6 @@ sup {
 
   .literature-sources {
     font-size: 14px;
-  }
-
-  body {
-    font-size: 16px;
-  }
-
-  .literature-sources {
-    font-size: 12px;
-  }
-
-  .literature-sources p {
-    margin-bottom: 12px;
-  }
-
-  .dynamic-content p {
-    font-size: 16px;
-  }
-
-  .dynamic-content ul {
-    padding-left: 11px;
-  }
-
-  .dynamic-content ul li {
-    padding-left: 16px;
-  }
-
-  .dynamic-content ul li:before {
-    left: 0;
-    top: 10px;
   }
 
   .popup {
