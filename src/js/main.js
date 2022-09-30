@@ -69,5 +69,17 @@ $(document).ready(function () {
                 }
             }
         });
+    // POPUP-CONTACTS
+    $('.popup-trigger').click(function (e) {
+        e.preventDefault();
+        $('#popupContacts').fadeIn();
+        $('.backdrop').fadeIn();
+        $('body').addClass('modal_open');
+    })
 
+    $('#closePopup,  .backdrop').click(function () {
+        $('#popupContacts').fadeOut();
+        $('.backdrop').fadeOut();
+        $('body').removeClass('modal_open');
+    });
 });

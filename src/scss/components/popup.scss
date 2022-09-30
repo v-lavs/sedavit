@@ -30,7 +30,7 @@
   &__header {
     position: relative;
     padding: 20px;
-    //background-color: $blue;
+    background-color: #318F28;
     color: #fff;
     text-align: center;
   }
@@ -112,7 +112,7 @@
   }
 
   &__contact-block {
-    //background-color: $blue;
+    background-color: #318F28;
     color: #fff;
     padding: 15px;
     border-radius: 0 0 10px 10px;
@@ -140,14 +140,24 @@
 
 }
 
-@include respond-to($xs) {
+@include respond-to($sm) {
   .popup {
     max-width: 704px;
     height: 717px;
 
     &__contact-item {
+      display: flex;
       flex: 0 0 100%;
       max-width: 100%;
+
+      img {
+        width: 60%;
+        margin-right: 15px;
+      }
+    }
+
+    &__contact-block {
+      width: 40%;
     }
 
     &__footer {
@@ -168,15 +178,6 @@
 
 
 @include respond-to($xs) {
-  .popup_big {
-    .popup__contact-item {
-      max-width: 420px;
-      flex: 0 0 100%;
-    }
-  }
-}
-
-@include respond-to($xs) {
   .popup {
     padding: 0 0 15px;
     height: 717px;
@@ -191,6 +192,16 @@
 
     .popup__contact-item {
       max-width: 100%;
+      display: block;
+
+      img {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    &__contact-block {
+      width: 100%;
     }
   }
 }
