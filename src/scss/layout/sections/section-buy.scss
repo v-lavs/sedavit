@@ -9,7 +9,7 @@
     justify-content: center;
     margin-bottom: 94px;
 
-    .btn {
+    .v-btn {
       margin-bottom: 0;
       margin-right: 27px;
 
@@ -54,7 +54,7 @@
   bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 0;
 
   .block-bubbles__content {
     width: 100%;
@@ -83,10 +83,10 @@
       display: flex;
       justify-content: center;
 
-      .btn_light {
+      .v-btn_light {
         margin-right: 20px;
 
-        .btn__icon {
+        .v-btn__icon {
           margin: 0;
         }
       }
@@ -101,11 +101,11 @@
     .section__block-btns {
       justify-content: space-between;
 
-      .btn_light {
+      .v-btn_light {
         margin: 0;
       }
 
-      .btn_dark {
+      .v-btn_dark {
         padding-left: 17px;
         padding-right: 17px;
       }
@@ -115,12 +115,12 @@
 
 @media screen and (max-width: 350px) {
   .section-buy {
-    .section__block-btns .btn_dark {
+    .section__block-btns .v-btn_dark {
       padding-left: 10px;
       padding-right: 10px;
     }
 
-    .btn_light {
+    .v-btn_light {
       padding-left: 20px;
       padding-right: 20px;
     }
