@@ -22,15 +22,21 @@
     <!--header-->
     <header class="header">
         <div class="container">
-            <button class="btn btn_burger" type="button" aria-label="Відкрити меню"></button>
-
             <a href="#" class="header__logo-site">
                 <h1 class="hide">СЕДАВІТ<sup class="trademark">&reg;</sup></h1>
                 <img src="assets/img/logo-white.svg" alt="Гліцисед лого" width="160" height="32">
             </a>
+            <button class="btn btn_burger" type="button" aria-label="Відкрити меню"></button>
             <nav class="nav">
                 <div class="nav__inner">
-                    <button class="btn btn_close" type="button" aria-label="Закрити меню"></button>
+                    <div class="nav__header">
+                        <div class="container">
+                            <a href="#" class="nav__logo-site">
+                                <img src="assets/img/logo-green.svg" alt="Гліцисед лого" width="160" height="32">
+                            </a>
+                            <button class="btn btn_close" type="button" aria-label="Закрити меню"></button>
+                        </div>
+                    </div>
 
                     <ul class="menu">
                         <li class="menu__item"><a href="#effect" class="menu__link">Коли приймати</a></li>
@@ -40,11 +46,6 @@
                     </ul>
 
                     <div class="nav__footer">
-                        <a target="_blank" href="https://www.arterium.ua/" class="footer__logo">
-                            <img src="assets/img/logo-arterium.svg" alt="Артеріум" class="footer__logo-img" width="183"
-                                 height="34">
-                        </a>
-
                         <div class="social-bar">
                             <a href="" class="social-bar__item phone popup-trigger">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -72,6 +73,14 @@
                                           fill="#61A1F4"/>
                                 </svg>
                             </a>
+                        </div>
+                        <div class="nav__footer-bottom">
+                            <div class="nav__footer-item">© 2022. Всі права захищені</div>
+                            <div class="nav__footer-item">Development by
+                                <a target="_blank" href="https://profi-creative.com">
+                                    <span class="text_warm">Profi Creative</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
