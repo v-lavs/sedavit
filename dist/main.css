@@ -255,7 +255,7 @@ sup {
 }
 
 .dynamic-content p {
-  font-size: 24px;
+  font-size: 16px;
   margin-bottom: .65em;
 }
 
@@ -270,16 +270,6 @@ sup {
 .dynamic-content h5,
 .dynamic-content h6 {
   margin-bottom: 1.5em;
-}
-
-.dynamic-content h1,
-.dynamic-content h2 {
-  font-size: 28px;
-}
-
-.dynamic-content h3,
-.dynamic-content h4 {
-  font-size: 26px;
 }
 
 .dynamic-content a:hover,
@@ -566,65 +556,6 @@ sup {
 
 .popup__footer {
   text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.marked {
-  outline: 2px solid red;
-  stroke: red;
-  stroke-width: 2;
-}
-
-.svg {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  overflow: visible;
-  mix-blend-mode: multiply;
-}
-
-.svg--defs {
-  width: 0;
-  height: 0;
-}
-
-.demo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.demo__title {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  font-family: 'Mouse Memoirs', sans-serif;
-  font-size: 4.9rem;
-  color: #FFF;
-  cursor: pointer;
-  display: none;
-}
-
-.demo__tip {
-  display: block;
-  font-size: 1rem;
-}
-
-.bubble {
-  cursor: pointer;
-}
-
-.bubble__splash {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .col_5 {
@@ -1011,7 +942,7 @@ sup {
 
 .action-list {
   position: relative;
-  max-width: 933px;
+  max-width: 1028px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1026,16 +957,15 @@ sup {
   right: -10px;
   top: 50%;
   transform: translateY(-50%);
-  height: 247px;
+  height: 258px;
   background-image: url(../assets/img/wawes.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 96% 102%;
+  background-size: 100% 100%;
 }
 
 .action-list__item {
   width: 25%;
-  max-width: 223px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1045,28 +975,28 @@ sup {
   line-height: 1.22;
 }
 
-.action-list__item:nth-child(odd) .action-list__wrap-img {
-  margin-top: 40px;
+.action-list__item:nth-child(odd) .action-list__thumb {
+  padding-top: 40px;
 }
 
 .action-list__item:nth-child(odd) .count-item {
-  top: -18px;
+  top: -17px;
   background-image: linear-gradient(61.34deg, #318F28 -1.53%, #55C64A 93.49%);
 }
 
-.action-list__item:nth-child(even) .action-list__wrap-img {
-  margin-bottom: 40px;
+.action-list__item:nth-child(even) .action-list__thumb {
+  padding-bottom: 40px;
 }
 
 .action-list__item:nth-child(even) .count-item {
-  bottom: -20px;
+  bottom: -17px;
   background-image: linear-gradient(90deg, #FFBD33 0%, #FF8000 100%);
 }
 
 .action-list__item:nth-child(even) .action-list__text {
   order: 1;
   padding-bottom: 0;
-  padding-top: 12px;
+  padding-top: 18px;
 }
 
 .action-list__thumb {
@@ -1074,7 +1004,7 @@ sup {
 }
 
 .action-list__text {
-  padding-bottom: 12px;
+  padding-bottom: 18px;
 }
 
 .action-list__wrap-img {
@@ -1116,7 +1046,7 @@ sup {
 }
 
 .section-features {
-  padding-top: 52px;
+  padding-top: 76px;
   padding-bottom: 110px;
 }
 
@@ -1321,14 +1251,6 @@ sup {
 }
 
 @media only screen and (max-width: 1160px) {
-  body {
-    font-size: 18px;
-  }
-
-  .dynamic-content p {
-    font-size: 20px;
-  }
-
   .container {
     max-width: 960px;
   }
@@ -1404,9 +1326,95 @@ sup {
   .section-banner__bg {
     background-position: left 32% top 0;
   }
+
+  .action-list {
+    flex-direction: column;
+    max-width: 688px;
+  }
+
+  .action-list:before {
+    left: -70px;
+    right: -70px;
+    transform: translateY(-50%) rotate(90deg);
+    height: 258px;
+  }
+
+  .action-list__item {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 17px 0;
+  }
+
+  .action-list__item:nth-child(odd) {
+    justify-content: flex-end;
+  }
+
+  .action-list__item:nth-child(odd) .action-list__thumb {
+    order: -1;
+    padding-top: 0;
+  }
+
+  .action-list__item:nth-child(odd) .action-list__text {
+    padding: 0 0 0 20px;
+    text-align: left;
+  }
+
+  .action-list__item:nth-child(odd) .count-item {
+    transform: translate(25%, -50%);
+    left: auto;
+    right: 0;
+    top: 50%;
+  }
+
+  .action-list__item:nth-child(even) {
+    justify-content: flex-start;
+  }
+
+  .action-list__item:nth-child(even) .action-list__thumb {
+    order: 1;
+    padding-bottom: 0;
+  }
+
+  .action-list__item:nth-child(even) .action-list__text {
+    padding: 0 20px 0 0;
+    text-align: right;
+  }
+
+  .action-list__item:nth-child(even) .count-item {
+    top: 50%;
+    left: 0;
+    bottom: auto;
+    transform: translate(-25%, -50%);
+  }
+
+  .action-list__text {
+    width: 35%;
+  }
+
+  .action-list__thumb {
+    width: 50%;
+  }
+
+  .action-list__wrap-img {
+    max-width: 262px;
+    height: auto;
+    padding-top: 45%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .section__title {
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .section__title .text_big {
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+
   .container {
     max-width: 580px;
   }
@@ -1467,9 +1475,34 @@ sup {
     z-index: 1;
     margin-top: 43px;
   }
+
+  .action-list:before {
+    left: -85px;
+    right: -85px;
+  }
+
+  .action-list__thumb {
+    width: 52%;
+  }
+
+  .action-list__wrap-img {
+    max-width: 210px;
+  }
+
+  .action-list__item:nth-child(odd) .count-item {
+    right: -5px;
+  }
+
+  .action-list__item:nth-child(even) .count-item {
+    left: -5px;
+  }
 }
 
 @media only screen and (max-width: 580px) {
+  .section__title {
+    font-size: 24px;
+  }
+
   .dynamic-content p {
     font-size: 18px;
   }
@@ -1643,6 +1676,52 @@ sup {
   .section-buy .section__block-btns .btn_dark {
     padding-left: 17px;
     padding-right: 17px;
+  }
+
+  .section-effect .section__title {
+    margin-bottom: 44px;
+  }
+
+  .action-list {
+    max-width: 262px;
+  }
+
+  .action-list:before {
+    display: none;
+  }
+
+  .action-list__item {
+    flex-direction: column;
+    margin-bottom: 34px;
+    padding: 0;
+  }
+
+  .action-list__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .action-list__item:nth-child(n) .action-list__text {
+    padding: 0;
+    text-align: center;
+    order: 2;
+  }
+
+  .action-list__item:nth-child(n) .action-list__thumb {
+    padding: 0 0 32px;
+  }
+
+  .action-list__item:nth-child(n) .count-item {
+    left: auto;
+    right: 50%;
+    top: auto;
+    bottom: 7px;
+    z-index: 1;
+    transform: translate(50%, 0%);
+  }
+
+  .action-list__text,
+  .action-list__thumb {
+    width: 100%;
   }
 }
 

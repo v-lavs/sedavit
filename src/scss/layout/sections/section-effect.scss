@@ -11,7 +11,7 @@
 
 .action-list {
   position: relative;
-  max-width: 933px;
+  max-width: 1028px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -25,16 +25,15 @@
     right: -10px;
     top: 50%;
     transform: translateY(-50%);
-    height: 247px;
+    height: 258px;
     background-image: url(../assets/img/wawes.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 96% 102%;
+    background-size: 100% 100%;
   }
 
   &__item {
     width: 25%;
-    max-width: 223px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,30 +43,30 @@
     line-height: 1.22;
 
     &:nth-child(odd) {
-      .action-list__wrap-img {
-        margin-top: 40px;
+      .action-list__thumb {
+        padding-top: 40px;
       }
 
       .count-item {
-        top: -18px;
+        top: -17px;
         background-image: linear-gradient(61.34deg, #318F28 -1.53%, #55C64A 93.49%);
       }
     }
 
     &:nth-child(even) {
-      .action-list__wrap-img {
-        margin-bottom: 40px;
+      .action-list__thumb {
+        padding-bottom: 40px;
       }
 
       .count-item {
-        bottom: -20px;
+        bottom: -17px;
         background-image: linear-gradient(90deg, #FFBD33 0%, #FF8000 100%);
       }
 
       .action-list__text {
         order: 1;
         padding-bottom: 0;
-        padding-top: 12px;
+        padding-top: 18px;
       }
     }
   }
@@ -77,7 +76,7 @@
   }
 
   &__text {
-    padding-bottom: 12px;
+    padding-bottom: 18px;
   }
 
   &__wrap-img {
@@ -117,4 +116,167 @@
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+@include respond-to($md) {
+  .action-list {
+    flex-direction: column;
+    max-width: 688px;
+
+    &:before {
+      left: -70px;
+      right: -70px;
+      transform: translateY(-50%) rotate(90deg);
+      height: 258px;
+    }
+
+    &__item {
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      padding: 17px 0;
+
+      &:nth-child(odd) {
+        justify-content: flex-end;
+
+        .action-list__thumb {
+          order: -1;
+          padding-top: 0;
+        }
+
+        .action-list__text {
+          padding: 0 0 0 20px;
+          text-align: left;
+        }
+
+        .count-item {
+          transform: translate(25%, -50%);
+          left: auto;
+          right: 0;
+          top: 50%;
+        }
+      }
+
+      &:nth-child(even) {
+        justify-content: flex-start;
+
+        .action-list__thumb {
+          order: 1;
+          padding-bottom: 0;
+        }
+
+        .action-list__text {
+          padding: 0 20px 0 0;
+          text-align: right;
+        }
+
+        .count-item {
+          top: 50%;
+          left: 0;
+          bottom: auto;
+          transform: translate(-25%, -50%);
+        }
+      }
+    }
+
+    &__text {
+      width: 35%;
+    }
+
+    &__thumb {
+      width: 50%;
+    }
+
+    &__wrap-img {
+      max-width: 262px;
+      height: auto;
+      padding-top: 45%;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .action-list {
+    &:before {
+      left: -85px;
+      right: -85px;
+    }
+
+    &__thumb {
+      width: 52%;
+    }
+
+    &__wrap-img {
+      max-width: 210px;
+    }
+
+    &__item {
+      &:nth-child(odd) {
+        .count-item {
+          right: -5px;
+        }
+      }
+
+      &:nth-child(even) {
+        .count-item {
+          left: -5px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-effect {
+    .section__title {
+      margin-bottom: 44px;
+    }
+  }
+  .action-list {
+    max-width: 262px;
+
+    &:before {
+      display: none;
+    }
+
+    &__item {
+      flex-direction: column;
+      margin-bottom: 34px;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(n) {
+        .action-list__text {
+          padding: 0;
+          text-align: center;
+          order: 2;
+        }
+
+        .action-list__thumb {
+          padding: 0 0 32px;
+        }
+
+        .count-item {
+          left: auto;
+          right: 50%;
+          top: auto;
+          bottom: 7px;
+          z-index: 1;
+          transform: translate(50%, 0%);
+        }
+      }
+    }
+
+    &__text,
+    &__thumb {
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+
+
 }

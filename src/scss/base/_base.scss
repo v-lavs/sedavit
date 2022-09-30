@@ -141,7 +141,7 @@ sup {
 
 .dynamic-content {
   p {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: .65em;
 
     &:last-child {
@@ -151,14 +151,6 @@ sup {
 
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5em;
-  }
-
-  h1, h2 {
-    font-size: 28px;
-  }
-
-  h3, h4 {
-    font-size: 26px;
   }
 
   a {
@@ -207,22 +199,24 @@ sup {
   }
 }
 
-@include respond-to($lg) {
-  body {
-    font-size: 18px;
-  }
-  .dynamic-content {
-    p {
-      font-size: 20px;
+
+@include respond-to($sm) {
+  .section__title {
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+
+    .text_big {
+      padding-right: 0;
+      padding-bottom:5px;
     }
   }
 }
 
-@include respond-to($md) {
-
-}
-
 @include respond-to($xs) {
+  .section__title {
+    font-size: 24px;
+  }
   .dynamic-content {
     p {
       font-size: 18px;
