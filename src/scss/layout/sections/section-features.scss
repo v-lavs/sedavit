@@ -1,6 +1,7 @@
 .section-features {
-  padding-top: 76px;
+  padding-top: 80px;
   padding-bottom: 110px;
+
   .section__title {
     max-width: 634px;
     margin-bottom: 44px;
@@ -70,7 +71,7 @@
   height: 468px;
   left: 30%;
   top: 20%;
-  transform: translate(-100%,-100%);
+  transform: translate(-100%, -100%);
   z-index: -1;
 }
 
@@ -80,4 +81,137 @@
   right: -40%;
   top: 27%;
   transform: translateX(50%)
+}
+
+@include respond-to($lg) {
+  .section-features {
+    &__thumb {
+      padding: 34px 54px;
+    }
+
+    .section__title {
+      margin-bottom: 30px;
+    }
+  }
+  .bg-anim-green {
+    width: 647px;
+    height: 360px;
+    left: 17%;
+    top: 25%;
+  }
+  .bg-anim-warm {
+    width: 658px;
+    height: 401px;
+    right: -50%;
+    top: 33%;
+  }
+  .card {
+    padding-top: 0;
+  }
+  .card_left {
+    margin-top: auto;
+  }
+  .card_right {
+    margin-bottom: auto;
+  }
+}
+
+@include respond-to($md) {
+  .section-features {
+    padding-top: 46px;
+    padding-bottom: 100px;
+
+    .section__title {
+      margin-bottom: 60px;
+    }
+
+    .block-btns {
+      text-align: center;
+    }
+
+    &__content {
+      padding-bottom: 70px;
+    }
+
+    &__thumb {
+      min-width: 210px;
+      width: 100%;
+      padding: 0;
+      order: -1;
+    }
+  }
+  .card {
+    padding-left: 30px;
+
+    &__title {
+      font-size: 23px;
+    }
+  }
+  .bg-anim-warm,
+  .bg-anim-green {
+    display: none;
+  }
+}
+
+@include respond-to($sm) {
+  .card {
+    margin-bottom: 40px;
+  }
+
+  .section-features {
+    .block-btns {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      margin-right: 0;
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__content {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+
+    &__thumb {
+      margin-bottom: 40px;
+
+      img {
+        max-width: 210px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .section__title {
+      max-width: 434px;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
+@include respond-to($xs) {
+  .card{
+    padding-left: 0;
+    text-align: center;
+    &__icon{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .section-features {
+    padding-bottom: 86px;
+    .section__title {
+      max-width: 326px;
+    }
+  }
 }

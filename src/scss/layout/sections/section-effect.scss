@@ -118,6 +118,12 @@
   }
 }
 
+@include respond-to($xl) {
+  .section-effect {
+    padding-top: 80px;
+  }
+}
+
 @include respond-to($md) {
   .action-list {
     flex-direction: column;
@@ -196,6 +202,9 @@
 }
 
 @include respond-to($sm) {
+  .section-effect {
+    padding-bottom: 50px;
+  }
   .action-list {
     &:before {
       left: -85px;
@@ -243,6 +252,7 @@
       flex-direction: column;
       margin-bottom: 34px;
       padding: 0;
+
       &:last-child {
         margin-bottom: 0;
       }
