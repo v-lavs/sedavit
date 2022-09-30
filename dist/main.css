@@ -882,16 +882,16 @@ sup {
   margin-bottom: 94px;
 }
 
-.section-buy .block-btns .v-btn {
+.section-buy .v-btn {
   margin-bottom: 0;
   margin-right: 27px;
 }
 
-.section-buy .block-btns .v-btn_success:before {
+.section-buy .v-btn_success:before {
   background-image: url(../assets/img/apteki.svg);
 }
 
-.section-buy .block-btns .v-btn:last-child {
+.section-buy .v-btn:last-child {
   margin-right: 0;
 }
 
@@ -901,6 +901,7 @@ sup {
   border: 6px solid #FFFFFF;
   overflow: hidden;
   position: relative;
+  min-height: 507px;
   padding-top: 43.6%;
   z-index: 1;
 }
@@ -1265,6 +1266,10 @@ sup {
     background-position: right 60% top 0;
   }
 
+  .section-buy {
+    padding-bottom: 70px;
+  }
+
   .section-features__thumb {
     padding: 34px 54px;
   }
@@ -1402,6 +1407,18 @@ sup {
 
   .section-banner__bg {
     background-position: left 32% top 0;
+  }
+
+  .section-buy {
+    padding-bottom: 80px;
+  }
+
+  .block-bubbles {
+    display: none;
+  }
+
+  .c-w-stores-fixed {
+    display: none !important;
   }
 
   .action-list {
@@ -1680,6 +1697,10 @@ sup {
     margin-top: 43px;
   }
 
+  .section-buy #geo_wgt {
+    zoom: 70%;
+  }
+
   .section-effect {
     padding-bottom: 50px;
   }
@@ -1879,44 +1900,21 @@ sup {
   }
 
   .section-buy {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 97px;
   }
 
-  .section-buy .mob-hide {
-    display: none;
+  .section-buy .block-btns {
+    display: block;
+    text-align: center;
   }
 
-  .section-buy .section__block-btns {
-    margin-bottom: 20px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  .section-buy .v-btn {
+    margin-right: 0;
+    margin-bottom: 26px;
   }
 
-  .section-buy .section__block-btns .v-btn_light {
-    margin-right: 20px;
-  }
-
-  .section-buy .section__block-btns .v-btn_light .v-btn__icon {
-    margin: 0;
-  }
-
-  .section-buy {
-    padding-top: 0;
-  }
-
-  .section-buy .section__block-btns {
-    justify-content: space-between;
-  }
-
-  .section-buy .section__block-btns .v-btn_light {
-    margin: 0;
-  }
-
-  .section-buy .section__block-btns .v-btn_dark {
-    padding-left: 17px;
-    padding-right: 17px;
+  .section-buy .v-btn:last-child {
+    margin-bottom: 0;
   }
 
   .section-effect .section__title {
@@ -2021,18 +2019,6 @@ sup {
     width: 100%;
     padding-top: 0;
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .section-buy .section__block-btns .v-btn_dark {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .section-buy .v-btn_light {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 

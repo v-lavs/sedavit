@@ -8,20 +8,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 94px;
+  }
 
-    .v-btn {
-      margin-bottom: 0;
-      margin-right: 27px;
+  .v-btn {
+    margin-bottom: 0;
+    margin-right: 27px;
 
-      &_success {
-        &:before {
-          background-image: url(../assets/img/apteki.svg);
-        }
+    &_success {
+      &:before {
+        background-image: url(../assets/img/apteki.svg);
       }
+    }
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -31,6 +31,7 @@
     border: 6px solid #FFFFFF;
     overflow: hidden;
     position: relative;
+    min-height: 507px;
     padding-top: 43.6%;
     z-index: 1;
   }
@@ -64,65 +65,51 @@
 
 @media (min-width: 769px) {
   #geo_wgt .c-w-main-wrapper {
-    height:100vh!important;
+    height: 100vh !important;
+  }
+}
+
+@include respond-to($lg) {
+  .section-buy {
+    padding-bottom: 70px;
+  }
+}
+
+@include respond-to($md) {
+  .section-buy {
+    padding-bottom: 80px;
+  }
+  .block-bubbles {
+    display: none;
+  }
+  .c-w-stores-fixed {
+    display: none !important;
+  }
+}
+
+@include respond-to($sm) {
+  .section-buy #geo_wgt {
+    zoom: 70%;
   }
 }
 
 @include respond-to($xs) {
   .section-buy {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 97px;
 
-    .mob-hide {
-      display: none;
+    .block-btns {
+      display: block;
+      text-align: center;
     }
 
-    .section__block-btns {
-      margin-bottom: 20px;
-      align-items: center;
-      display: flex;
-      justify-content: center;
+    .v-btn {
+      margin-right: 0;
+      margin-bottom: 26px;
 
-      .v-btn_light {
-        margin-right: 20px;
-
-        .v-btn__icon {
-          margin: 0;
-        }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 }
 
-@include respond-to($xs) {
-  .section-buy {
-    padding-top: 0;
-
-    .section__block-btns {
-      justify-content: space-between;
-
-      .v-btn_light {
-        margin: 0;
-      }
-
-      .v-btn_dark {
-        padding-left: 17px;
-        padding-right: 17px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .section-buy {
-    .section__block-btns .v-btn_dark {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .v-btn_light {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-}
