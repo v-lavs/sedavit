@@ -61,14 +61,16 @@
 .parallax {
   perspective: 1px;
   overflow-y: auto;
+  overflow-x: hidden;
+   transform-style: preserve-3d;
 }
 
 .parallax__layer {
   width: 100%;
+
   display: block;
   position: absolute;
   left: 50%;
-
   &_1 {
     max-width: 1239px;
     transform: translateX(-50%) translateZ(0);
@@ -78,14 +80,12 @@
   &_2 {
     max-width: 1350px;
     transform:translateX(-50%)  translateZ(-2px) scale(3);
-    //left: 114px;
     top: -300px;
   }
 
   &_3 {
     max-width: 1387px;
     transform:translateX(-50%)  translateZ(-4px) scale(5);
-    //left: 350px;
     top: -60%;
   }
 }

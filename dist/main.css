@@ -965,6 +965,8 @@ sup {
 .parallax {
   perspective: 1px;
   overflow-y: auto;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
 }
 
 .parallax__layer {
