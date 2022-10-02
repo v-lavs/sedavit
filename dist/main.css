@@ -974,6 +974,7 @@ sup {
 .parallax__layer {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 .parallax__layer_1 {
@@ -1113,7 +1114,7 @@ sup {
   max-width: 634px;
   margin-bottom: 44px;
   margin-left: auto;
-  transition-delay: .6s;
+  transition-delay: .5s;
 }
 
 .section-features__img {
@@ -1149,7 +1150,7 @@ sup {
 .card {
   padding-top: 54px;
   max-width: 255px;
-  transition-delay: 1.2s;
+  transition-delay: 1s;
 }
 
 .card__title {
@@ -1184,19 +1185,19 @@ sup {
 }
 
 .bg-anim-green {
-  width: 833px;
-  height: 468px;
-  left: 30%;
-  top: 20%;
+  width: 868px;
+  height: 467px;
+  left: 22%;
+  top: 30%;
   transform: translate(-100%, -100%);
   z-index: -1;
 }
 
 .bg-anim-warm {
-  width: 847px;
-  height: 516px;
-  right: -40%;
-  top: 27%;
+  width: 983px;
+  height: 500px;
+  right: -50%;
+  top: 47%;
   transform: translateX(50%);
   z-index: 1;
 }

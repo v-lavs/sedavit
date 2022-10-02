@@ -54,12 +54,15 @@
     right: 0;
     left: 0;
     z-index: 0;
+
     &_1 {
       bottom: 50px;
     }
+
     &_2 {
       top: 22%;
     }
+
     &_3 {
       bottom: 22%;
     }
@@ -69,6 +72,7 @@
 .parallax__layer {
   display: block;
   margin: 0 auto;
+  width: 100%;
 
   &_1 {
     max-width: 1239px;

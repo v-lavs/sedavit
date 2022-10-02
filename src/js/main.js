@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('body').addClass('overflow-hidden');
     });
 
-    $('.btn_close, .backdrop').click(function (e) {
+    $('.btn_close, .backdrop, .menu__link').click(function (e) {
         nav.removeClass('open');
         $('.btn_close').hide();
         $('body').removeClass('overflow-hidden');
@@ -104,4 +104,6 @@ $(document).ready(function () {
     }, {
         offset: '75%'
     });
+
+    var rellax = new Rellax('.rellax');
 });
