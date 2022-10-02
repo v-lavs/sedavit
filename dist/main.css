@@ -866,7 +866,7 @@ sup {
 }
 
 .section-banner__wrap-img img {
-  animation: pulse 1s infinite ease-out;
+  animation: pulse 1s infinite linear;
 }
 
 .section-banner__item {
