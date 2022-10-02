@@ -55,10 +55,17 @@
 
   }
 
+  .wrap-anim {
+    display: flex;
+  }
 
   &__wrap-img {
     width: 50%;
     padding-right: 60px;
+
+    img {
+      animation: pulse 1s infinite ease-out;
+    }
   }
 
   &__item {
@@ -103,6 +110,18 @@
   .block-btns {
     width: 50%;
     padding-top: 18px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }
 
@@ -221,6 +240,10 @@
     &__wrap-img {
       padding-right: 0;
       margin-bottom: 40px;
+    }
+
+    .wrap-anim {
+      flex-wrap: wrap;
     }
 
     .block-btns,
