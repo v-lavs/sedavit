@@ -218,7 +218,8 @@
                         <div class="bg-anim-warm">
                             <img src="assets/img/bubbles-warm.png" alt="" class="anim-thumb" width="847" height="516">
                         </div>
-                        <img src="assets/img/preparat3.png" alt="Упаковка Седавіт" class="section-features__img section_anim" width="408" height="302">
+                        <img src="assets/img/preparat3.png" alt="Упаковка Седавіт"
+                             class="section-features__img section_anim" width="408" height="302">
                     </div>
                     <div class="card card_right section_anim">
                         <div class="card__icon" style="background-image: url(assets/img/icon2.svg);"></div>
@@ -294,10 +295,19 @@
         </section>
 
         <section id="buy" class="section section-buy">
-            <div class="block-bubbles parallax">
-                <img src="assets/img/bubbles/01.png" class="parallax__layer parallax__layer_1" alt="" width="1239" height="163">
-                <img src="assets/img/bubbles/02.png" class="parallax__layer parallax__layer_2" alt="" width="1350" height="267">
-                <img src="assets/img/bubbles/03.png" class="parallax__layer parallax__layer_3" alt="" width="1387" height="445">
+            <div class="rellax rellax_1" data-rellax-percentage="0.5" data-rellax-speed="2">
+                <img src="assets/img/bubbles/01.png" class="parallax__layer parallax__layer_1" alt="" width="1239"
+                     height="163">
+
+            </div>
+            <div class="rellax rellax_2" data-rellax-percentage="0.5" data-rellax-speed="4">
+                <img src="assets/img/bubbles/02.png" class="parallax__layer parallax__layer_2" alt="" width="1350"
+                     height="267">
+
+            </div>
+            <div class="rellax rellax_3" data-rellax-percentage="0.5" data-rellax-speed="6">
+                <img src="assets/img/bubbles/03.png" class="parallax__layer parallax__layer_3" alt="" width="1387"
+                     height="445">
             </div>
             <div class="container">
                 <div class="block-btns">
@@ -475,9 +485,13 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
 <script src="dist/main.js"></script>
 <script src="https://geoapteka.ua/geowidget/loader/geowidget.min.js?v=1601386184990"></script>
+
 <script>
+    var rellax = new Rellax('.rellax');
 
     window.params = {
         mapNodeID: 'parent-map',

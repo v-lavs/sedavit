@@ -47,46 +47,39 @@
   }
 }
 
-.block-bubbles {
-  position: absolute;
 
-  width: 100%;
-  height: 640px;
-  bottom: 60px;
-  z-index: 0;
-  left: 0;
-  right: 0;
-}
-
-.parallax {
-  perspective: 1px;
-  overflow-y: auto;
-  overflow-x: hidden;
-   transform-style: preserve-3d;
+.section-buy {
+  .rellax {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    &_1 {
+      bottom: 50px;
+    }
+    &_2 {
+      top: 22%;
+    }
+    &_3 {
+      bottom: 22%;
+    }
+  }
 }
 
 .parallax__layer {
-  width: 100%;
-
   display: block;
-  position: absolute;
-  left: 50%;
+  margin: 0 auto;
+
   &_1 {
     max-width: 1239px;
-    transform: translateX(-50%) translateZ(0);
-    bottom: 0;
   }
 
   &_2 {
     max-width: 1350px;
-    transform:translateX(-50%)  translateZ(-2px) scale(3);
-    top: -300px;
   }
 
   &_3 {
     max-width: 1387px;
-    transform:translateX(-50%)  translateZ(-4px) scale(5);
-    top: -60%;
   }
 }
 

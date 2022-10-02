@@ -952,46 +952,40 @@ sup {
   zoom: 60%;
 }
 
-.block-bubbles {
+.section-buy .rellax {
   position: absolute;
-  width: 100%;
-  height: 640px;
-  bottom: 60px;
-  z-index: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  z-index: 0;
 }
 
-.parallax {
-  perspective: 1px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform-style: preserve-3d;
+.section-buy .rellax_1 {
+  bottom: 50px;
+}
+
+.section-buy .rellax_2 {
+  top: 22%;
+}
+
+.section-buy .rellax_3 {
+  bottom: 22%;
 }
 
 .parallax__layer {
-  width: 100%;
   display: block;
-  position: absolute;
-  left: 50%;
+  margin: 0 auto;
 }
 
 .parallax__layer_1 {
   max-width: 1239px;
-  transform: translateX(-50%) translateZ(0);
-  bottom: 0;
 }
 
 .parallax__layer_2 {
   max-width: 1350px;
-  transform: translateX(-50%) translateZ(-2px) scale(3);
-  top: -300px;
 }
 
 .parallax__layer_3 {
   max-width: 1387px;
-  transform: translateX(-50%) translateZ(-4px) scale(5);
-  top: -60%;
 }
 
 .section-effect {
@@ -1119,7 +1113,7 @@ sup {
   max-width: 634px;
   margin-bottom: 44px;
   margin-left: auto;
-  transition-delay: 1.2s;
+  transition-delay: .6s;
 }
 
 .section-features__img {
@@ -1155,7 +1149,7 @@ sup {
 .card {
   padding-top: 54px;
   max-width: 255px;
-  transition-delay: .6s;
+  transition-delay: 1.2s;
 }
 
 .card__title {
