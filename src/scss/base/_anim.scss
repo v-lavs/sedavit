@@ -1,0 +1,17 @@
+
+.fade {
+  opacity: 0;
+
+  &.active_anim {
+    transition:opacity  ease-in .5s;
+    opacity: 1
+  }
+}
+.section_anim {
+  opacity: 0;
+  transition: opacity ease-in .5s;
+
+}
+.section_in-view {
+  opacity: 1;
+}

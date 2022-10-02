@@ -3,11 +3,12 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../../node_modules/waypoints/lib/jquery.waypoints.js ;
 
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
-    var scrolled;
+    let scrolled;
     window.onscroll = function () {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled > 100) {
@@ -81,5 +82,55 @@ $(document).ready(function () {
         $('#popupContacts').fadeOut();
         $('.backdrop').fadeOut();
         $('body').removeClass('modal_open');
+    });
+
+
+//    ANIMATION
+    let $elem = $('.section-banner .fade');
+    let len = $elem.length;
+    let i = 0;
+
+    function fade() {
+        for (i = 0; i < len; i++) {
+            (function (i) {
+
+                let el = $elem.eq(i);
+
+                setTimeout(function () {
+
+                    el.addClass('active_anim');
+
+                }, 600 * i);
+
+            })(i);
+        }
+    }
+
+    setTimeout(fade, 300);
+
+    $('.section_anim').waypoint(function (direction) {
+        $(this.element).addClass('section_in-view');
+    }, {
+        offset: '70%'
+    });
+    $('.section-application .section_anim').waypoint(function (direction) {
+        let $elem = $(this.elem);
+        let len = $elem.length;
+                 for (i = 0; i < len; i++) {
+                (function (i) {
+
+                    let el = $elem.eq(i);
+
+                    setTimeout(function () {
+
+                        el.addClass('section_in-view');
+
+                    }, 600 * i);
+
+                })(i);
+            }
+
+    }, {
+        offset: '25%'
     });
 });
