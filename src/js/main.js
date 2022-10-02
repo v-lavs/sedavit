@@ -3,6 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../../node_modules/rellax/rellax.min.js ;
 //= include ../../node_modules/waypoints/lib/jquery.waypoints.js ;
 
 // CUSTOM SCRIPTS
@@ -105,5 +106,6 @@ $(document).ready(function () {
         offset: '75%'
     });
 
-    var rellax = new Rellax('.rellax');
+
+     rellax = new Rellax('.rellax');
 });

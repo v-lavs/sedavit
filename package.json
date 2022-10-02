@@ -30,6 +30,7 @@
     "jquery": "^3.6.0",
     "natives": "^1.1.6",
     "particles.js": "^2.0.0",
+    "rellax": "^1.12.1",
     "swiper": "^7.4.1",
     "waypoints": "^4.0.1"
   }
