@@ -1227,6 +1227,7 @@ sup {
   width: 100%;
   display: flex;
   margin-bottom: 75px;
+  transition-delay: .35s;
 }
 
 .section-application__item:last-child {
