@@ -87,50 +87,21 @@ $(document).ready(function () {
 
 //    ANIMATION
     let $elem = $('.section-banner .fade');
-    let len = $elem.length;
-    let i = 0;
 
     function fade() {
-        for (i = 0; i < len; i++) {
-            (function (i) {
+        for (let i = 0; i < $elem.length; i++) {
+            let el = $elem.eq(i);
 
-                let el = $elem.eq(i);
-
-                setTimeout(function () {
-
-                    el.addClass('active_anim');
-
-                }, 600 * i);
-
-            })(i);
+            setTimeout(function () {
+                el.addClass('active_anim');
+            }, 500 * i);
         }
     }
-
-    setTimeout(fade, 300);
+    fade();
 
     $('.section_anim').waypoint(function (direction) {
         $(this.element).addClass('section_in-view');
     }, {
-        offset: '70%'
-    });
-    $('.section-application .section_anim').waypoint(function (direction) {
-        let $elem = $(this.elem);
-        let len = $elem.length;
-                 for (i = 0; i < len; i++) {
-                (function (i) {
-
-                    let el = $elem.eq(i);
-
-                    setTimeout(function () {
-
-                        el.addClass('section_in-view');
-
-                    }, 600 * i);
-
-                })(i);
-            }
-
-    }, {
-        offset: '25%'
+        offset: '75%'
     });
 });
